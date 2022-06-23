@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, rgb(140, 140, 141) 0%, rgb(222, 221, 240) 100%);
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.section {
+    height: 500px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-style: groove;
+    background-color: rgb(233, 205, 113);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+p {
+    text-align: center;
+}
