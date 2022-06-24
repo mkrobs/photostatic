@@ -1,8 +1,7 @@
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial;
-    background: linear-gradient(to right, rgb(140, 140, 141) 0%, rgb(222, 221, 240) 100%);
+    background: linear-gradient(to left, rgb(140, 140, 141) 0%, rgb(222, 221, 240) 100%);
+    padding: 10px;
 }
 
 header {
@@ -13,19 +12,98 @@ header {
     margin-left: 20px;
 }
 
-.section {
-    height: 500px;
-    width: 100%;
-    margin-bottom: 10px;
-    margin-right: 20px;
-    margin-left: 20px;
+a:link {
+    color: white;
+    text-decoration: none;
+  }
+
+a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  
+a:hover {
+    text-decoration: none;
+    color: rgb(233, 212, 27);
+  }
+  
+a:active {
+    text-decoration: none;
+    color: white;
+  }
+
+.container {
+    padding: 0px;
     border-style: groove;
     background-color: rgb(233, 205, 113);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.section {
+    max-width: 100%;
+    height: auto;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
+.secphoto {
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+
+.photoframe {
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    transition: .5s ease;
+}
+
 p {
     text-align: center;
 }
+
+.overlay {
+    position: absolute;
+    box-sizing: border-box;
+    object-fit: contain;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s ease;
+    
+  }
+
+  .secphoto:hover .photoframe {
+    opacity: 0.7;
+  }
+  
+  .secphoto:hover .overlay {
+    opacity: 0.9;
+  }
+
+  .text {
+    color: white;
+    background-color: #4177eb;
+    font-size: 16px;
+    padding: 16px 32px;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
