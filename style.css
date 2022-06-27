@@ -1,15 +1,19 @@
 body {
     font-family: Arial;
-    background: linear-gradient(to left, rgb(140, 140, 141) 0%, rgb(222, 221, 240) 100%);
+    background: linear-gradient(to left, rgb(235, 235, 235) 0%, rgb(255, 255, 255) 100%);
     padding: 10px;
 }
 
 header {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin-right: 20px;
-    margin-left: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Roboto';
+}
+
+h2 {
+  margin: 5px;
 }
 
 a:link {
@@ -32,10 +36,73 @@ a:active {
     color: white;
   }
 
+
+.inverted {
+  background-color: #328cc1;
+  color: white;
+  padding: 0px 2px;
+}
+
+.title {
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+.subtitle {
+ margin: 0;
+ letter-spacing: 1px;
+}
+
+.listtitle {
+  list-style: none;
+}
+
+.banner {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  object-fit: contain;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  
+}
+
+
+.logo {
+  height: 75px;
+  width: 75px;
+}
+
+.headelement {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleelement {
+  display: flex;
+}
+
+
+.menuelement {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.menuitem {
+  font-family: Garamond, sans-serif;
+  text-align: center;
+  color: black;
+  margin: 5px;
+}
+
 .container {
     padding: 0px;
-    border-style: groove;
-    background-color: rgb(233, 205, 113);
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -51,13 +118,17 @@ a:active {
 }
 
 .secphoto {
-    margin-top: 10px;
+    margin: 10px 10px 0px 10px;
     max-width: 100%;
     height: auto;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; 
+}
+
+.secphoto.last {
+   margin-bottom: 10px;
 }
 
 
@@ -100,10 +171,17 @@ p {
     padding: 16px 32px;
     font-size: 20px;
     position: absolute;
+    display: inline-block;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+    cursor: pointer;
+  }
+
+  .text:hover {
+    color: #4177eb;
+    background-color: white;
   }
