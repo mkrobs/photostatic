@@ -37,6 +37,16 @@ a:active {
   }
 
 
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky + .header {
+    padding-top: 102px;
+  }
+
 .inverted {
   background-color: #328cc1;
   color: white;
@@ -46,6 +56,7 @@ a:active {
 .title {
   letter-spacing: 4px;
   margin: 0;
+  text-align: center;
 }
 
 .subtitle {
@@ -68,20 +79,29 @@ a:active {
   
 }
 
+.titlecontainer {
+  margin: 100px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 
 .logo {
   height: 75px;
   width: 75px;
 }
 
-.headelement {
-  margin: 5px;
-  display: flex;
-  flex-direction: column;
-}
 
 .titleelement {
   display: flex;
+}
+
+.titleelementlow {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
 }
 
 
@@ -89,20 +109,27 @@ a:active {
   margin: 20px;
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 
-.menuitem {
+a.menuitem:hover {
+    color: #1e87c4;
+    background-color: #d6eaf6;
+}
+
+
+
+a.menuitem {
+  margin: 5px; 
   font-family: Garamond, sans-serif;
   text-align: center;
   color: black;
-  margin: 5px;
+  padding: 5px;
 }
 
 .container {
     padding: 0px;
-    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -145,12 +172,11 @@ p {
 
 .overlay {
     position: absolute;
-    box-sizing: border-box;
+    display: inline-block;
     object-fit: contain;
     padding: 10px;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+    top: 45%;
+    left: 50%;
     opacity: 0;
     transition: .5s ease;
     
