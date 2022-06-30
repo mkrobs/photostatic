@@ -73,7 +73,7 @@ a:active {
 }
 
 .headerspacer {
-  margin-bottom: 95px;
+  margin-bottom: 90px;
 }
 
 
@@ -116,6 +116,23 @@ a.linknone:hover {
   flex-wrap: wrap;
   justify-content: space-between; 
   
+}
+
+.bannerparallax {
+ 
+  background-image: url("img/background.jpg");
+  min-height: 750px; 
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .bannerparallax {
+    background-attachment: scroll;
+  }
 }
 
 .titlecontainer {
@@ -173,6 +190,21 @@ a.menuitem {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+}
+
+.containeralbum {
+  padding: 0px;
+  width: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.secalbum {
+  width: 100%;
 }
 
 .section {
@@ -235,6 +267,17 @@ a.menuitem {
   opacity: 0.9;
 }
 
+.album {
+    max-width: 100%;
+    padding: 50px 0px 0px 0px;
+    max-height: 800px; 
+    transition: .5s ease;
+}
+
+.imgtitle {
+  font-family: 'Noto Mono';
+  font-size: 20px;
+}
 
 
 .secphoto.last {
@@ -247,6 +290,10 @@ a.menuitem {
     max-height: 500px;
     object-fit: contain;
     transition: .5s ease;
+}
+
+.big {
+  height: 700px;
 }
 
 p {
